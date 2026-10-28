@@ -1,0 +1,339 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   CREBIZ AVANT-GARDE DESIGN SYSTEM
+   Luxury Brutalism, Glossy Liquid Chrome, High-Contrast Typography & 3D Lighting
+   ========================================================================== */
+
+:root {
+  --bg-dark: #0a0b0d;
+  --bg-card: rgba(18, 20, 24, 0.85);
+  --bg-card-hover: rgba(28, 31, 38, 0.95);
+  
+  --text-white: #ffffff;
+  --text-muted: #a1a1aa;
+  --text-dim: #71717a;
+
+  --accent-gold: #facc15;
+  --accent-gold-glow: rgba(250, 204, 21, 0.25);
+  --accent-amber: #eab308;
+  --accent-cyan: #06b6d4;
+
+  --font-hero: 'Syne', -apple-system, sans-serif;
+  --font-display: 'Outfit', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-script: 'Reenie Beanie', cursive;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Atmospheric Ambient Lighting */
+.ambient-glow-wrapper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse at 12% 28%, rgba(185, 150, 60, 0.18) 0%, rgba(80, 65, 25, 0.04) 45%, transparent 70%),
+    radial-gradient(circle at 88% 70%, rgba(250, 204, 21, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(6, 182, 212, 0.03) 0%, transparent 50%);
+}
+
+/* Grain texture overlay */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Typography Utilities */
+.font-hero {
+  font-family: var(--font-hero);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Big CREBIZ Headline */
+.crebiz-title {
+  font-size: clamp(4.5rem, 14vw, 13rem);
+  color: var(--text-white);
+  letter-spacing: -0.05em;
+  user-select: none;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Golden Lightning Bolt Polygon Behind Letters */
+.lightning-star-poly {
+  position: absolute;
+  top: -15%;
+  left: 36%;
+  width: 140px;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.75), rgba(202, 138, 4, 0.35));
+  clip-path: polygon(48% 0%, 55% 42%, 100% 35%, 52% 62%, 58% 100%, 25% 58%, 0% 64%, 32% 40%);
+  filter: drop-shadow(0 0 35px rgba(250, 204, 21, 0.4));
+  z-index: -1;
+  pointer-events: none;
+  animation: pulseBolt 4s ease-in-out infinite;
+}
+
+@keyframes pulseBolt {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+  50% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+}
+
+/* Hand-Drawn Yellow Sparks Doodle */
+.sparks-doodle {
+  display: inline-flex;
+  gap: 4px;
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  vertical-align: super;
+  animation: sparkleRotate 3s ease-in-out infinite alternate;
+}
+
+@keyframes sparkleRotate {
+  0% { transform: scale(0.9) rotate(-4deg); }
+  100% { transform: scale(1.15) rotate(6deg); }
+}
+
+/* Slide Transition Animations */
+.slide-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 48px 40px 48px;
+  z-index: 10;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Circular Arrow Carousel Nav Buttons */
+.carousel-nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: var(--transition-fast);
+}
+
+.carousel-nav-btn:hover {
+  transform: translateY(-50%) scale(1.12);
+  background: var(--accent-gold);
+  color: #000;
+  box-shadow: 0 15px 40px rgba(250, 204, 21, 0.5);
+}
+
+.carousel-nav-btn.prev {
+  left: 24px;
+}
+
+.carousel-nav-btn.next {
+  right: 24px;
+}
+
+/* Slide Indicator Counter */
+.slide-indicator {
+  position: fixed;
+  bottom: 24px;
+  left: 48px;
+  z-index: 50;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slide-indicator strong {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* 3D Interactive Card Tilt Effect */
+.card-tilt {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.card-tilt:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(250, 204, 21, 0.15);
+}
+
+.card-tilt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.card-tilt:hover img {
+  transform: scale(1.06);
+}
+
+/* Glass Badge / Tag Pills on Cards */
+.card-tag-pill {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(10, 11, 13, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Circular Magnetic "View More ↗" Button */
+.btn-circle-action {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0a0b0d;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s, box-shadow 0.3s;
+}
+
+.btn-circle-action:hover {
+  transform: scale(1.1) rotate(6deg);
+  background: var(--accent-gold);
+  box-shadow: 0 20px 50px rgba(250, 204, 21, 0.45);
+}
+
+/* Services Numbered List */
+.service-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.service-item-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(250, 204, 21, 0.3);
+  padding-left: 28px;
+}
+
+.service-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-right: 14px;
+}
+
+.service-item-row:hover .service-number {
+  color: var(--accent-gold);
+}
+
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

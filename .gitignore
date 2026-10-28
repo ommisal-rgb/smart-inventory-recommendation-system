@@ -6,3 +6,6 @@ __pycache__/
 env/
 venv/
 *.log
+
+frontend/node_modules/
+

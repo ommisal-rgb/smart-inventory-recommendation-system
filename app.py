@@ -99,8 +99,27 @@ def bootstrap_system(excel_file_path=None):
 
 # --- Web Routes ---
 
+DIST_DIR = os.path.join(os.path.dirname(__file__), "dist")
+
 @app.route("/")
 def index():
+    if not system_cache["is_initialized"]:
+        bootstrap_system()
+    # Serve compiled React App if built, otherwise fallback to index.html
+    react_index = os.path.join(DIST_DIR, "index.html")
+    if os.path.exists(react_index):
+        return send_file(react_index)
+    return render_template("index.html")
+
+@app.route("/assets/<path:filename>")
+def serve_react_assets(filename):
+    asset_path = os.path.join(DIST_DIR, "assets", filename)
+    if os.path.exists(asset_path):
+        return send_file(asset_path)
+    return ("Asset not found", 404)
+
+@app.route("/dashboard")
+def executive_dashboard():
     if not system_cache["is_initialized"]:
         bootstrap_system()
     return render_template("index.html")
