@@ -1,0 +1,21 @@
+sku,name,category,unit_cost,selling_price,lead_time_days,current_stock,min_order_qty,annual_holding_cost_rate,order_placement_cost
+SKU-ELC-001,"UltraHD 4K Smart Monitor 32""",Electronics,210.0,349.99,14,28,20,0.2,45.0
+SKU-ELC-002,Noise-Cancelling Wireless Earbuds,Electronics,45.0,89.99,7,18,50,0.2,45.0
+SKU-ELC-003,Mechanical Gaming Keyboard RGB,Electronics,38.0,79.99,10,85,30,0.2,45.0
+SKU-ELC-004,Fast-Charging USB-C GaN Hub 100W,Electronics,18.0,42.99,5,14,40,0.2,45.0
+SKU-ELC-005,Ergonomic Vertical Mouse Pro,Electronics,22.0,49.99,8,62,25,0.2,45.0
+SKU-APP-101,Performance Fleece Hoodie Athletic,Apparel,16.5,44.99,12,35,50,0.2,45.0
+SKU-APP-102,Moisture-Wicking DryFit T-Shirt,Apparel,8.0,24.99,7,120,100,0.2,45.0
+SKU-APP-103,All-Weather Breathable Windbreaker,Apparel,28.0,69.99,15,12,30,0.2,45.0
+SKU-APP-104,Thermal Winter Running Leggings,Apparel,14.0,36.99,9,48,40,0.2,45.0
+SKU-HOM-201,Smart Espresso & Cappuccino Maker,Home & Kitchen,125.0,229.99,16,9,15,0.2,45.0
+SKU-HOM-202,Air Fryer Digital 6-Quart Vortex,Home & Kitchen,42.0,89.99,10,22,25,0.2,45.0
+SKU-HOM-203,Cast Iron Dutch Oven 5.5-Quart,Home & Kitchen,32.0,64.99,14,55,20,0.2,45.0
+SKU-HOM-204,Precision Culinary Chef Knife Set,Home & Kitchen,39.0,84.99,11,19,25,0.2,45.0
+SKU-FIT-301,Adjustable Quick-Select Dumbbell 50lb,Fitness,95.0,189.99,18,7,10,0.2,45.0
+SKU-FIT-302,Extra Thick Non-Slip Yoga Mat Pro,Fitness,11.0,32.99,6,140,60,0.2,45.0
+SKU-FIT-303,Smart Speed Jump Rope with Counter,Fitness,9.5,24.99,8,31,40,0.2,45.0
+SKU-BEA-401,Hydrating Peptide Face Serum 50ml,Beauty & Health,12.0,34.99,9,15,50,0.2,45.0
+SKU-BEA-402,Deep Repair Organic Argan Hair Oil,Beauty & Health,7.5,21.99,7,80,50,0.2,45.0
+SKU-BEA-403,Mineral SPF 50 Broad Spectrum Sunscreen,Beauty & Health,8.0,22.99,8,25,45,0.2,45.0
+SKU-BEA-404,Sonic Electric Toothbrush Smart UV,Beauty & Health,26.0,59.99,12,42,30,0.2,45.0

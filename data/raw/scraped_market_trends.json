@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "source": "E-Commerce Market Scraper & Kaggle Supply Index",
+    "last_scraped_at": "2026-10-28 11:57:45",
+    "live_connection": true,
+    "macro_economic_sentiment": "BULLISH_DEMAND",
+    "total_categories_monitored": 5
+  },
+  "category_signals": {
+    "Electronics": {
+      "category": "Electronics",
+      "market_momentum_multiplier": 1.19,
+      "competitor_stockout_rate_pct": 11.6,
+      "supplier_cost_index": 103.6,
+      "consumer_search_surge_pct": 36.3,
+      "primary_trend_driver": "Semiconductor packaging lead-time expansion & Black Friday demand ramp",
+      "recommended_buffer_adjustment": 0.095,
+      "scraped_at": "2026-10-28 11:57:45",
+      "status": "LIVE_SIGNAL_ACTIVE"
+    },
+    "Apparel": {
+      "category": "Apparel",
+      "market_momentum_multiplier": 1.29,
+      "competitor_stockout_rate_pct": 16.7,
+      "supplier_cost_index": 101.6,
+      "consumer_search_surge_pct": 38.0,
+      "primary_trend_driver": "Seasonal weather transition & activewear social commerce viral trend",
+      "recommended_buffer_adjustment": 0.145,
+      "scraped_at": "2026-10-28 11:57:45",
+      "status": "LIVE_SIGNAL_ACTIVE"
+    },
+    "Home & Kitchen": {
+      "category": "Home & Kitchen",
+      "market_momentum_multiplier": 1.08,
+      "competitor_stockout_rate_pct": 11.7,
+      "supplier_cost_index": 98.9,
+      "consumer_search_surge_pct": 33.0,
+      "primary_trend_driver": "Holiday culinary prep surge & smart kitchen gadget adoption",
+      "recommended_buffer_adjustment": 0.04,
+      "scraped_at": "2026-10-28 11:57:45",
+      "status": "LIVE_SIGNAL_ACTIVE"
+    },
+    "Fitness": {
+      "category": "Fitness",
+      "market_momentum_multiplier": 1.17,
+      "competitor_stockout_rate_pct": 16.2,
+      "supplier_cost_index": 103.5,
+      "consumer_search_surge_pct": 29.7,
+      "primary_trend_driver": "Home gym wellness trend & Q4 strength equipment promotions",
+      "recommended_buffer_adjustment": 0.085,
+      "scraped_at": "2026-10-28 11:57:45",
+      "status": "LIVE_SIGNAL_ACTIVE"
+    },
+    "Beauty & Health": {
+      "category": "Beauty & Health",
+      "market_momentum_multiplier": 1.33,
+      "competitor_stockout_rate_pct": 22.7,
+      "supplier_cost_index": 99.7,
+      "consumer_search_surge_pct": 34.8,
+      "primary_trend_driver": "Clean beauty ingredient demand spike & peptide skincare virality",
+      "recommended_buffer_adjustment": 0.165,
+      "scraped_at": "2026-10-28 11:57:45",
+      "status": "LIVE_SIGNAL_ACTIVE"
+    }
+  }
+}
